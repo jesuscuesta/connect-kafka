@@ -1,0 +1,39 @@
+{
+  "name": "connect-kafka",
+  "version": "0.1.0",
+  "description": "Recive log with Express and send information with format from producer Kafka to consumer kafka",
+  "author": {
+    "name": "Jesus Cuesta Arza",
+    "email": "jesus@jesuscuesta.net",
+    "url": "http://jesuscuesta.blog"
+  },
+  "keywords": [
+    "express",
+    "kafka-node",
+    "logs",
+    "prorducer"
+  ],
+  "scripts": {
+    "ng": "ng",
+    "start": "node app.js",
+    "lint:init": "eslint --init",
+    "lint": "eslint app.js",
+    "test": "mocha --exit -R spec app.spec.js",
+    "test:reporter": "rimraf reports && mkdir reports && mocha --exit -R markdown app.spec.js > reports/unit.md && mocha --exit -R xunit app.spec.js > reports/unit.xml"
+  },
+  "private": true,
+  "dependencies": {
+    "body-parser": "*",
+    "cors": "^2.8.4",
+    "express": "*",
+    "kafka-node": "*",
+    "optimist": "*"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-google": "^0.9.1",
+    "mocha": "^5.2.0",
+    "supertest": "^3.1.0"
+  },
+  "license": "MIT"
+}
